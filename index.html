@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sreekutty B | Personal Website</title>
+  <title>WanderWorld | Travel & Tourism</title>
 
   <style>
     * {
@@ -16,45 +16,46 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
+      color: #1e293b;
+      background: #f8fafc;
       line-height: 1.6;
     }
 
-    /* NAVIGATION */
+    /* NAVBAR */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 18px 8%;
-      background: rgba(15, 23, 42, 0.95);
+      padding: 18px 7%;
+      background: rgba(255, 255, 255, 0.95);
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     }
 
     .logo {
       font-size: 25px;
       font-weight: bold;
-      color: #38bdf8;
+      color: #0284c7;
     }
 
     nav ul {
       display: flex;
-      gap: 25px;
       list-style: none;
+      gap: 25px;
     }
 
     nav ul li a {
-      color: white;
       text-decoration: none;
+      color: #334155;
       font-weight: bold;
       transition: 0.3s;
     }
 
     nav ul li a:hover {
-      color: #38bdf8;
+      color: #0284c7;
     }
 
     /* HERO */
@@ -65,7 +66,11 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      background:
+        linear-gradient(rgba(2, 132, 199, 0.75), rgba(15, 23, 42, 0.75)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
     }
 
     .hero-content {
@@ -75,32 +80,24 @@
 
     .hero h1 {
       font-size: 65px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .hero h1 span {
-      color: #38bdf8;
-    }
-
-    .hero h2 {
-      font-size: 28px;
-      color: #dbeafe;
-      margin-bottom: 20px;
-      font-weight: normal;
+      color: #bae6fd;
     }
 
     .hero p {
-      font-size: 19px;
-      color: #cbd5e1;
+      font-size: 21px;
       margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      padding: 13px 28px;
+      padding: 14px 30px;
       margin: 6px;
-      background: #38bdf8;
-      color: #0f172a;
+      background: #0284c7;
+      color: white;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
@@ -109,18 +106,17 @@
 
     .btn:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    .outline {
-      background: transparent;
-      color: #38bdf8;
-      border: 2px solid #38bdf8;
+    .btn-light {
+      background: white;
+      color: #0284c7;
     }
 
     /* SECTIONS */
     section {
-      padding: 100px 8%;
+      padding: 90px 8%;
     }
 
     .section-title {
@@ -130,64 +126,32 @@
     }
 
     .section-title span {
-      color: #38bdf8;
+      color: #0284c7;
     }
 
     /* ABOUT */
     .about {
-      background: #111827;
+      background: white;
     }
 
     .about-content {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
     }
 
     .about-content p {
-      color: #cbd5e1;
       font-size: 18px;
+      color: #64748b;
       margin-bottom: 20px;
     }
 
-    /* SKILLS */
-    .skills-container {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+    /* DESTINATIONS */
+    .destinations {
+      background: #f1f5f9;
     }
 
-    .skill {
-      background: #1e293b;
-      padding: 30px;
-      text-align: center;
-      border-radius: 15px;
-      border: 1px solid #334155;
-      transition: 0.3s;
-    }
-
-    .skill:hover {
-      transform: translateY(-8px);
-      border-color: #38bdf8;
-    }
-
-    .skill h3 {
-      color: #38bdf8;
-      margin-bottom: 10px;
-    }
-
-    .skill p {
-      color: #94a3b8;
-    }
-
-    /* PROJECTS */
-    .projects {
-      background: #111827;
-    }
-
-    .projects-container {
+    .destination-grid {
       max-width: 1100px;
       margin: auto;
       display: grid;
@@ -195,74 +159,196 @@
       gap: 25px;
     }
 
-    .project {
-      background: #1e293b;
-      padding: 30px;
+    .destination-card {
+      background: white;
       border-radius: 15px;
-      border: 1px solid #334155;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       transition: 0.3s;
     }
 
-    .project:hover {
+    .destination-card:hover {
       transform: translateY(-8px);
-      border-color: #38bdf8;
     }
 
-    .project h3 {
-      color: #38bdf8;
-      margin-bottom: 12px;
+    .destination-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
     }
 
-    .project p {
-      color: #94a3b8;
+    .destination-info {
+      padding: 25px;
+    }
+
+    .destination-info h3 {
+      color: #0284c7;
+      margin-bottom: 10px;
+    }
+
+    .destination-info p {
+      color: #64748b;
+      margin-bottom: 15px;
+    }
+
+    .destination-info a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* PACKAGES */
+    .packages {
+      background: white;
+    }
+
+    .package-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .package-card {
+      padding: 35px 25px;
+      border: 1px solid #e2e8f0;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .package-card:hover {
+      transform: translateY(-8px);
+      border-color: #0284c7;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .package-card h3 {
+      color: #0284c7;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .package-card p {
+      color: #64748b;
       margin-bottom: 20px;
     }
 
-    .project a {
-      color: #38bdf8;
-      text-decoration: none;
-      font-weight: bold;
+    /* GALLERY */
+    .gallery {
+      background: #f1f5f9;
+    }
+
+    .gallery-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.04);
+    }
+
+    /* WHY US */
+    .why-us {
+      background: white;
+    }
+
+    .why-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .why-card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+      color: #0284c7;
+    }
+
+    .why-card p {
+      color: #64748b;
+    }
+
+    /* BOOKING */
+    .booking {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .booking p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
     }
 
     /* CONTACT */
     .contact {
       text-align: center;
+      background: #f8fafc;
     }
 
     .contact p {
-      color: #cbd5e1;
+      color: #64748b;
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
     .contact-links a {
-      display: inline-block;
-      padding: 12px 20px;
-      border: 1px solid #38bdf8;
-      border-radius: 25px;
-      color: #38bdf8;
       text-decoration: none;
+      color: #0284c7;
+      border: 1px solid #0284c7;
+      padding: 10px 20px;
+      border-radius: 25px;
       transition: 0.3s;
     }
 
     .contact-links a:hover {
-      background: #38bdf8;
-      color: #0f172a;
+      background: #0284c7;
+      color: white;
     }
 
     /* FOOTER */
     footer {
+      background: #020617;
+      color: #94a3b8;
       text-align: center;
       padding: 25px;
-      background: #020617;
-      color: #64748b;
     }
 
     /* ANIMATION */
@@ -282,7 +368,7 @@
     @media (max-width: 800px) {
 
       nav {
-        padding: 15px 5%;
+        padding: 15px 4%;
       }
 
       nav ul {
@@ -290,24 +376,33 @@
       }
 
       nav ul li a {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .hero h1 {
         font-size: 42px;
       }
 
-      .hero h2 {
-        font-size: 21px;
+      .hero p {
+        font-size: 17px;
       }
 
-      .skills-container,
-      .projects-container {
+      .destination-grid,
+      .package-grid,
+      .why-grid {
         grid-template-columns: 1fr;
       }
 
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       section {
-        padding: 80px 6%;
+        padding: 70px 6%;
+      }
+
+      .section-title {
+        font-size: 32px;
       }
     }
   </style>
@@ -319,14 +414,15 @@
   <nav>
 
     <div class="logo">
-      Sreekutty B
+      WanderWorld
     </div>
 
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -339,24 +435,20 @@
     <div class="hero-content">
 
       <h1>
-        Hello, I'm <span>Sreekutty B</span>
+        Explore The <span>World</span>
       </h1>
 
-      <h2>
-        Student | Web Enthusiast | Creative Learner
-      </h2>
-
       <p>
-        Welcome to my personal website. Explore my skills,
-        projects and interests.
+        Discover beautiful destinations, exciting adventures
+        and unforgettable travel experiences.
       </p>
 
-      <a href="#about" class="btn">
-        Explore My Website
+      <a href="#destinations" class="btn">
+        Explore Destinations
       </a>
 
-      <a href="#contact" class="btn outline">
-        Contact Me
+      <a href="#packages" class="btn btn-light">
+        View Packages
       </a>
 
     </div>
@@ -368,28 +460,25 @@
   <section class="about" id="about">
 
     <h2 class="section-title">
-      About <span>Me</span>
+      About <span>WanderWorld</span>
     </h2>
 
     <div class="about-content">
 
       <p>
-        Hello! I'm Sreekutty B, a student interested in
-        technology, web development and creative projects.
+        WanderWorld is a travel and tourism website created
+        to help travelers discover amazing destinations
+        around the world.
       </p>
 
       <p>
-        I enjoy learning new technologies and developing
-        simple and attractive websites.
+        From peaceful beaches and beautiful mountains to
+        exciting cities, we believe every journey creates
+        a story worth remembering.
       </p>
 
-      <p>
-        This website was created as part of my college
-        web development assignment.
-      </p>
-
-      <a href="#skills" class="btn">
-        View My Skills
+      <a href="#contact" class="btn">
+        Contact Us
       </a>
 
     </div>
@@ -397,55 +486,87 @@
   </section>
 
 
-  <!-- SKILLS -->
-  <section id="skills">
+  <!-- DESTINATIONS -->
+  <section class="destinations" id="destinations">
 
     <h2 class="section-title">
-      My <span>Skills</span>
+      Popular <span>Destinations</span>
     </h2>
 
-    <div class="skills-container">
+    <div class="destination-grid">
 
-      <div class="skill">
-        <h3>HTML</h3>
-        <p>
-          Creating structured and semantic web pages.
-        </p>
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+          alt="Tropical Beach"
+        >
+
+        <div class="destination-info">
+
+          <h3>Maldives</h3>
+
+          <p>
+            Relax on beautiful beaches and enjoy
+            crystal-clear tropical waters.
+          </p>
+
+          <a href="#packages">
+            View Packages →
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="skill">
-        <h3>CSS</h3>
-        <p>
-          Designing responsive and attractive websites.
-        </p>
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80"
+          alt="Mountain landscape"
+        >
+
+        <div class="destination-info">
+
+          <h3>Switzerland</h3>
+
+          <p>
+            Experience breathtaking mountains,
+            lakes and charming villages.
+          </p>
+
+          <a href="#packages">
+            View Packages →
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="skill">
-        <h3>JavaScript</h3>
-        <p>
-          Adding interactive features to websites.
-        </p>
-      </div>
 
-      <div class="skill">
-        <h3>GitHub</h3>
-        <p>
-          Managing and publishing source code.
-        </p>
-      </div>
+      <div class="destination-card">
 
-      <div class="skill">
-        <h3>Vercel</h3>
-        <p>
-          Deploying websites online.
-        </p>
-      </div>
+        <img
+          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+          alt="India travel destination"
+        >
 
-      <div class="skill">
-        <h3>Creativity</h3>
-        <p>
-          Creating new ideas and digital experiences.
-        </p>
+        <div class="destination-info">
+
+          <h3>India</h3>
+
+          <p>
+            Explore incredible culture, history,
+            food and natural beauty.
+          </p>
+
+          <a href="#packages">
+            View Packages →
+          </a>
+
+        </div>
+
       </div>
 
     </div>
@@ -453,65 +574,206 @@
   </section>
 
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
+  <!-- PACKAGES -->
+  <section class="packages" id="packages">
 
     <h2 class="section-title">
-      My <span>Projects</span>
+      Tour <span>Packages</span>
     </h2>
 
-    <div class="projects-container">
+    <div class="package-grid">
 
-      <div class="project">
+      <div class="package-card">
 
-        <h3>Personal Portfolio</h3>
+        <h3>Beach Escape</h3>
+
+        <div class="price">₹15,999</div>
 
         <p>
-          A responsive personal portfolio website
-          developed using HTML and CSS.
+          4 Days / 3 Nights<br>
+          Hotel + Breakfast<br>
+          Sightseeing
         </p>
 
-        <a href="https://github.com/amsree1604-svg/my-project"
-           target="_blank">
-          GitHub →
+        <a href="#booking" class="btn">
+          Book Now
         </a>
 
       </div>
 
 
-      <div class="project">
+      <div class="package-card">
 
-        <h3>College Assignment</h3>
+        <h3>Mountain Adventure</h3>
+
+        <div class="price">₹24,999</div>
 
         <p>
-          A professional static website created
-          as part of my college assignment.
+          6 Days / 5 Nights<br>
+          Hotel + Meals<br>
+          Guided Tours
         </p>
 
-        <a href="https://my-project-three-psi-66.vercel.app"
-           target="_blank">
-          Live Website →
+        <a href="#booking" class="btn">
+          Book Now
         </a>
 
       </div>
 
 
-      <div class="project">
+      <div class="package-card">
 
-        <h3>Future Project</h3>
+        <h3>World Explorer</h3>
+
+        <div class="price">₹49,999</div>
 
         <p>
-          More web development projects will be
-          added here in the future.
+          10 Days / 9 Nights<br>
+          Hotels + Meals<br>
+          Multiple Destinations
         </p>
 
-        <a href="#contact">
-          Contact Me →
+        <a href="#booking" class="btn">
+          Book Now
         </a>
 
       </div>
 
     </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+
+    <h2 class="section-title">
+      Travel <span>Gallery</span>
+    </h2>
+
+    <div class="gallery-grid">
+
+      <img
+        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
+        alt="Nature"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
+        alt="Lake"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+        alt="Mountain"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
+        alt="Beach"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+        alt="Landscape"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80"
+        alt="Forest"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+        alt="Travel"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+        alt="Adventure"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+
+    <h2 class="section-title">
+      Why <span>Choose Us?</span>
+    </h2>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+
+        <div class="icon">🌍</div>
+
+        <h3>Beautiful Destinations</h3>
+
+        <p>
+          Discover amazing places and unforgettable
+          travel experiences.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">💰</div>
+
+        <h3>Affordable Packages</h3>
+
+        <p>
+          Enjoy memorable holidays with
+          budget-friendly packages.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">⭐</div>
+
+        <h3>Great Experiences</h3>
+
+        <p>
+          We focus on creating enjoyable and
+          memorable journeys.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKING -->
+  <section class="booking" id="booking">
+
+    <h2 class="section-title">
+      Ready to <span>Travel?</span>
+    </h2>
+
+    <p>
+      Start planning your next adventure today.
+    </p>
+
+    <a
+      href="mailto:wanderworld@example.com?subject=Travel%20Booking%20Request"
+      class="btn"
+    >
+      Make a Booking
+    </a>
+
+    <a href="#contact" class="btn btn-light">
+      Contact Us
+    </a>
 
   </section>
 
@@ -520,57 +782,46 @@
   <section class="contact" id="contact">
 
     <h2 class="section-title">
-      Contact <span>Me</span>
+      Contact <span>Us</span>
     </h2>
 
     <p>
-      Thank you for visiting my website.
-      You can connect with me through the links below.
+      Have questions about a destination or package?
+      Get in touch with us.
     </p>
 
     <div class="contact-links">
 
-      <!-- LINK 1 -->
-      <a href="mailto:your-email@example.com">
+      <a href="mailto:wanderworld@example.com">
         📧 Email
       </a>
 
-      <!-- LINK 2 -->
-      <a href="https://github.com/amsree1604-svg"
-         target="_blank">
-        💻 GitHub
+      <a href="tel:+919876543210">
+        📞 Call Us
       </a>
 
-      <!-- LINK 3 -->
-      <a href="https://www.linkedin.com"
-         target="_blank">
-        🔗 LinkedIn
-      </a>
-
-      <!-- LINK 4 -->
       <a href="#home">
         🏠 Home
       </a>
 
-      <!-- LINK 5 -->
       <a href="#about">
-        👤 About
+        ℹ️ About
       </a>
 
-      <!-- LINK 6 -->
-      <a href="#skills">
-        🛠 Skills
+      <a href="#destinations">
+        🌍 Destinations
       </a>
 
-      <!-- LINK 7 -->
-      <a href="#projects">
-        🚀 Projects
+      <a href="#packages">
+        🧳 Packages
       </a>
 
-      <!-- LINK 8 -->
-      <a href="https://my-project-three-psi-66.vercel.app"
-         target="_blank">
-        🌐 Live Website
+      <a href="#gallery">
+        📸 Gallery
+      </a>
+
+      <a href="#booking">
+        📝 Booking
       </a>
 
     </div>
@@ -582,7 +833,7 @@
   <footer>
 
     <p>
-      © 2026 Sreekutty B | College Web Development Assignment
+      © 2026 WanderWorld | College Web Development Assignment
     </p>
 
   </footer>
