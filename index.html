@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WanderWorld | Travel & Tourism</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>LearnHub | Online Learning Platform</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -16,29 +21,36 @@
 
     body {
       font-family: Arial, sans-serif;
-      color: #1e293b;
       background: #f8fafc;
+      color: #1e293b;
       line-height: 1.6;
     }
 
-    /* NAVBAR */
+    /* ================= NAVBAR ================= */
+
     nav {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
+
       padding: 18px 7%;
-      background: rgba(255, 255, 255, 0.95);
+
+      background: rgba(255,255,255,0.96);
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       z-index: 1000;
+
       box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     }
 
     .logo {
-      font-size: 25px;
+      font-size: 26px;
       font-weight: bold;
-      color: #0284c7;
+      color: #2563eb;
     }
 
     nav ul {
@@ -55,26 +67,37 @@
     }
 
     nav ul li a:hover {
-      color: #0284c7;
+      color: #2563eb;
     }
 
-    /* HERO */
+
+    /* ================= HERO ================= */
+
     .hero {
+
       min-height: 100vh;
+
       padding: 120px 20px 80px;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       text-align: center;
+
       background:
-        linear-gradient(rgba(2, 132, 199, 0.75), rgba(15, 23, 42, 0.75)),
-        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #7c3aed
+        );
+
       color: white;
     }
 
     .hero-content {
       max-width: 850px;
+
       animation: fadeIn 1.2s ease;
     }
 
@@ -84,371 +107,615 @@
     }
 
     .hero h1 span {
-      color: #bae6fd;
+      color: #bfdbfe;
     }
 
     .hero p {
       font-size: 21px;
-      margin-bottom: 30px;
+      color: #e0e7ff;
+      margin-bottom: 35px;
     }
 
     .btn {
+
       display: inline-block;
+
       padding: 14px 30px;
+
       margin: 6px;
-      background: #0284c7;
-      color: white;
+
+      background: white;
+
+      color: #2563eb;
+
       text-decoration: none;
+
       border-radius: 30px;
+
       font-weight: bold;
+
       transition: 0.3s;
     }
 
     .btn:hover {
+
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+      box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.2);
     }
 
-    .btn-light {
-      background: white;
-      color: #0284c7;
+    .btn-blue {
+      background: #2563eb;
+      color: white;
     }
 
-    /* SECTIONS */
+
+    /* ================= GENERAL ================= */
+
     section {
       padding: 90px 8%;
     }
 
     .section-title {
+
       text-align: center;
+
       font-size: 40px;
+
       margin-bottom: 50px;
     }
 
     .section-title span {
-      color: #0284c7;
+      color: #2563eb;
     }
 
-    /* ABOUT */
+
+    /* ================= ABOUT ================= */
+
     .about {
       background: white;
     }
 
     .about-content {
+
       max-width: 900px;
+
       margin: auto;
+
       text-align: center;
     }
 
     .about-content p {
+
       font-size: 18px;
+
       color: #64748b;
+
       margin-bottom: 20px;
     }
 
-    /* DESTINATIONS */
-    .destinations {
+
+    /* ================= COURSES ================= */
+
+    .courses {
       background: #f1f5f9;
     }
 
-    .destination-grid {
+    .course-grid {
+
       max-width: 1100px;
+
       margin: auto;
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 25px;
     }
 
-    .destination-card {
+    .course-card {
+
       background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
 
-    .destination-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .destination-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .destination-info {
-      padding: 25px;
-    }
-
-    .destination-info h3 {
-      color: #0284c7;
-      margin-bottom: 10px;
-    }
-
-    .destination-info p {
-      color: #64748b;
-      margin-bottom: 15px;
-    }
-
-    .destination-info a {
-      color: #0284c7;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* PACKAGES */
-    .packages {
-      background: white;
-    }
-
-    .package-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .package-card {
-      padding: 35px 25px;
-      border: 1px solid #e2e8f0;
-      border-radius: 15px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .package-card:hover {
-      transform: translateY(-8px);
-      border-color: #0284c7;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .package-card h3 {
-      color: #0284c7;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-size: 30px;
-      font-weight: bold;
-      margin: 15px 0;
-    }
-
-    .package-card p {
-      color: #64748b;
-      margin-bottom: 20px;
-    }
-
-    /* GALLERY */
-    .gallery {
-      background: #f1f5f9;
-    }
-
-    .gallery-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.04);
-    }
-
-    /* WHY US */
-    .why-us {
-      background: white;
-    }
-
-    .why-grid {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .why-card {
-      text-align: center;
       padding: 30px;
+
+      border-radius: 15px;
+
+      border: 1px solid #e2e8f0;
+
+      transition: 0.3s;
+
+      box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.05);
     }
 
-    .why-card .icon {
+    .course-card:hover {
+
+      transform: translateY(-8px);
+
+      border-color: #2563eb;
+
+      box-shadow:
+        0 12px 30px
+        rgba(37,99,235,0.15);
+    }
+
+    .course-icon {
+
       font-size: 45px;
+
       margin-bottom: 15px;
     }
 
-    .why-card h3 {
-      margin-bottom: 10px;
-      color: #0284c7;
+    .course-card h3 {
+
+      color: #2563eb;
+
+      margin-bottom: 12px;
+
+      font-size: 22px;
     }
 
-    .why-card p {
+    .course-card p {
+
+      color: #64748b;
+
+      margin-bottom: 20px;
+    }
+
+    .course-card a {
+
+      text-decoration: none;
+
+      color: #2563eb;
+
+      font-weight: bold;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .features {
+      background: white;
+    }
+
+    .feature-grid {
+
+      max-width: 1000px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .feature {
+
+      text-align: center;
+
+      padding: 30px;
+
+      border-radius: 15px;
+
+      background: #f8fafc;
+
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.08);
+    }
+
+    .feature-icon {
+
+      font-size: 45px;
+
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+
+      color: #2563eb;
+
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+
       color: #64748b;
     }
 
-    /* BOOKING */
-    .booking {
-      background: #0f172a;
+
+    /* ================= INSTRUCTORS ================= */
+
+    .instructors {
+
+      background: #f1f5f9;
+    }
+
+    .instructor-grid {
+
+      max-width: 1000px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .instructor {
+
+      background: white;
+
+      padding: 30px;
+
+      text-align: center;
+
+      border-radius: 15px;
+
+      transition: 0.3s;
+    }
+
+    .instructor:hover {
+
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.08);
+    }
+
+    .instructor-avatar {
+
+      width: 90px;
+      height: 90px;
+
+      margin: auto auto 15px;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 35px;
+
+      background: #dbeafe;
+
+      color: #2563eb;
+    }
+
+    .instructor h3 {
+
+      margin-bottom: 8px;
+
+      color: #2563eb;
+    }
+
+    .instructor p {
+
+      color: #64748b;
+    }
+
+
+    /* ================= STATS ================= */
+
+    .stats {
+
+      background:
+        linear-gradient(
+          135deg,
+          #1d4ed8,
+          #6d28d9
+        );
+
       color: white;
+    }
+
+    .stats-grid {
+
+      max-width: 1000px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 25px;
+
       text-align: center;
     }
 
-    .booking p {
-      color: #cbd5e1;
+    .stat h3 {
+
+      font-size: 40px;
+
+      margin-bottom: 5px;
+    }
+
+    .stat p {
+
+      color: #dbeafe;
+    }
+
+
+    /* ================= REGISTRATION ================= */
+
+    .register {
+
+      background: white;
+
+      text-align: center;
+    }
+
+    .register p {
+
+      color: #64748b;
+
+      font-size: 18px;
+
       margin-bottom: 25px;
     }
 
-    /* CONTACT */
+
+    /* ================= CONTACT ================= */
+
     .contact {
-      text-align: center;
+
       background: #f8fafc;
+
+      text-align: center;
     }
 
     .contact p {
+
       color: #64748b;
+
       font-size: 18px;
-      margin-bottom: 25px;
+
+      margin-bottom: 30px;
     }
 
     .contact-links {
+
       display: flex;
+
       justify-content: center;
+
       gap: 15px;
+
       flex-wrap: wrap;
     }
 
     .contact-links a {
+
       text-decoration: none;
-      color: #0284c7;
-      border: 1px solid #0284c7;
-      padding: 10px 20px;
+
+      color: #2563eb;
+
+      border: 1px solid #2563eb;
+
+      padding: 11px 22px;
+
       border-radius: 25px;
+
       transition: 0.3s;
     }
 
     .contact-links a:hover {
-      background: #0284c7;
+
+      background: #2563eb;
+
       color: white;
     }
 
-    /* FOOTER */
+
+    /* ================= FOOTER ================= */
+
     footer {
+
       background: #020617;
+
       color: #94a3b8;
+
       text-align: center;
+
       padding: 25px;
     }
 
-    /* ANIMATION */
+
+    /* ================= ANIMATION ================= */
+
     @keyframes fadeIn {
+
       from {
+
         opacity: 0;
-        transform: translateY(30px);
+
+        transform:
+          translateY(30px);
       }
 
       to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
     }
 
-    /* MOBILE */
+
+    /* ================= MOBILE ================= */
+
     @media (max-width: 800px) {
 
       nav {
+
         padding: 15px 4%;
       }
 
       nav ul {
+
         gap: 10px;
       }
 
       nav ul li a {
+
         font-size: 11px;
       }
 
       .hero h1 {
+
         font-size: 42px;
       }
 
       .hero p {
+
         font-size: 17px;
       }
 
-      .destination-grid,
-      .package-grid,
-      .why-grid {
+      .course-grid,
+      .feature-grid,
+      .instructor-grid {
+
         grid-template-columns: 1fr;
       }
 
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .stats-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
       section {
+
         padding: 70px 6%;
       }
 
       .section-title {
+
         font-size: 32px;
       }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- ================= NAVIGATION ================= -->
+
   <nav>
 
     <div class="logo">
-      WanderWorld
+      LearnHub
     </div>
 
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#destinations">Destinations</a></li>
-      <li><a href="#packages">Packages</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
+
+      <li>
+        <a href="#home">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#about">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#courses">
+          Courses
+        </a>
+      </li>
+
+      <li>
+        <a href="#features">
+          Features
+        </a>
+      </li>
+
+      <li>
+        <a href="#instructors">
+          Instructors
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
+
     </ul>
 
   </nav>
 
 
-  <!-- HOME -->
-  <section class="hero" id="home">
+  <!-- ================= HOME ================= -->
+
+  <section
+    class="hero"
+    id="home"
+  >
 
     <div class="hero-content">
 
       <h1>
-        Explore The <span>World</span>
+        Learn.
+        <span>Grow.</span>
+        Succeed.
       </h1>
 
       <p>
-        Discover beautiful destinations, exciting adventures
-        and unforgettable travel experiences.
+
+        Welcome to LearnHub —
+        an online learning platform
+        designed to help students
+        build knowledge and develop
+        valuable skills.
+
       </p>
 
-      <a href="#destinations" class="btn">
-        Explore Destinations
+      <a
+        href="#courses"
+        class="btn"
+      >
+        Explore Courses
       </a>
 
-      <a href="#packages" class="btn btn-light">
-        View Packages
+      <a
+        href="#register"
+        class="btn"
+      >
+        Start Learning
       </a>
 
     </div>
@@ -456,29 +723,44 @@
   </section>
 
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <!-- ================= ABOUT ================= -->
+
+  <section
+    class="about"
+    id="about"
+  >
 
     <h2 class="section-title">
-      About <span>WanderWorld</span>
+
+      About
+      <span>LearnHub</span>
+
     </h2>
 
     <div class="about-content">
 
       <p>
-        WanderWorld is a travel and tourism website created
-        to help travelers discover amazing destinations
-        around the world.
+
+        LearnHub is a modern online learning
+        platform created to make education
+        accessible, simple and engaging.
+
       </p>
 
       <p>
-        From peaceful beaches and beautiful mountains to
-        exciting cities, we believe every journey creates
-        a story worth remembering.
+
+        Students can explore different
+        subjects, learn from experienced
+        instructors and develop practical
+        skills from anywhere.
+
       </p>
 
-      <a href="#contact" class="btn">
-        Contact Us
+      <a
+        href="#features"
+        class="btn btn-blue"
+      >
+        Learn More
       </a>
 
     </div>
@@ -486,357 +768,588 @@
   </section>
 
 
-  <!-- DESTINATIONS -->
-  <section class="destinations" id="destinations">
+  <!-- ================= COURSES ================= -->
+
+  <section
+    class="courses"
+    id="courses"
+  >
 
     <h2 class="section-title">
-      Popular <span>Destinations</span>
+
+      Popular
+      <span>Courses</span>
+
     </h2>
 
-    <div class="destination-grid">
 
-      <div class="destination-card">
+    <div class="course-grid">
 
-        <img
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-          alt="Tropical Beach"
-        >
 
-        <div class="destination-info">
+      <div class="course-card">
 
-          <h3>Maldives</h3>
-
-          <p>
-            Relax on beautiful beaches and enjoy
-            crystal-clear tropical waters.
-          </p>
-
-          <a href="#packages">
-            View Packages →
-          </a>
-
+        <div class="course-icon">
+          💻
         </div>
 
-      </div>
-
-
-      <div class="destination-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80"
-          alt="Mountain landscape"
-        >
-
-        <div class="destination-info">
-
-          <h3>Switzerland</h3>
-
-          <p>
-            Experience breathtaking mountains,
-            lakes and charming villages.
-          </p>
-
-          <a href="#packages">
-            View Packages →
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="destination-card">
-
-        <img
-          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
-          alt="India travel destination"
-        >
-
-        <div class="destination-info">
-
-          <h3>India</h3>
-
-          <p>
-            Explore incredible culture, history,
-            food and natural beauty.
-          </p>
-
-          <a href="#packages">
-            View Packages →
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PACKAGES -->
-  <section class="packages" id="packages">
-
-    <h2 class="section-title">
-      Tour <span>Packages</span>
-    </h2>
-
-    <div class="package-grid">
-
-      <div class="package-card">
-
-        <h3>Beach Escape</h3>
-
-        <div class="price">₹15,999</div>
+        <h3>
+          Web Development
+        </h3>
 
         <p>
-          4 Days / 3 Nights<br>
-          Hotel + Breakfast<br>
-          Sightseeing
+
+          Learn HTML, CSS and JavaScript
+          and build modern websites.
+
         </p>
 
-        <a href="#booking" class="btn">
-          Book Now
+        <a href="#register">
+          Enroll Now →
         </a>
 
       </div>
 
 
-      <div class="package-card">
+      <div class="course-card">
 
-        <h3>Mountain Adventure</h3>
+        <div class="course-icon">
+          📊
+        </div>
 
-        <div class="price">₹24,999</div>
+        <h3>
+          Data Science
+        </h3>
 
         <p>
-          6 Days / 5 Nights<br>
-          Hotel + Meals<br>
-          Guided Tours
+
+          Explore data analysis,
+          visualization and
+          basic machine learning.
+
         </p>
 
-        <a href="#booking" class="btn">
-          Book Now
+        <a href="#register">
+          Enroll Now →
         </a>
 
       </div>
 
 
-      <div class="package-card">
+      <div class="course-card">
 
-        <h3>World Explorer</h3>
+        <div class="course-icon">
+          🎨
+        </div>
 
-        <div class="price">₹49,999</div>
+        <h3>
+          UI/UX Design
+        </h3>
 
         <p>
-          10 Days / 9 Nights<br>
-          Hotels + Meals<br>
-          Multiple Destinations
+
+          Learn the fundamentals of
+          user interface and experience
+          design.
+
         </p>
 
-        <a href="#booking" class="btn">
-          Book Now
+        <a href="#register">
+          Enroll Now →
         </a>
 
       </div>
 
+
+      <div class="course-card">
+
+        <div class="course-icon">
+          📱
+        </div>
+
+        <h3>
+          App Development
+        </h3>
+
+        <p>
+
+          Discover the basics of
+          creating modern mobile
+          applications.
+
+        </p>
+
+        <a href="#register">
+          Enroll Now →
+        </a>
+
+      </div>
+
+
+      <div class="course-card">
+
+        <div class="course-icon">
+          🤖
+        </div>
+
+        <h3>
+          Artificial Intelligence
+        </h3>
+
+        <p>
+
+          Understand AI concepts,
+          applications and future
+          technologies.
+
+        </p>
+
+        <a href="#register">
+          Enroll Now →
+        </a>
+
+      </div>
+
+
+      <div class="course-card">
+
+        <div class="course-icon">
+          🔐
+        </div>
+
+        <h3>
+          Cyber Security
+        </h3>
+
+        <p>
+
+          Learn fundamental concepts
+          of online safety and
+          cybersecurity.
+
+        </p>
+
+        <a href="#register">
+          Enroll Now →
+        </a>
+
+      </div>
+
+
     </div>
 
   </section>
 
 
-  <!-- GALLERY -->
-  <section class="gallery" id="gallery">
+  <!-- ================= FEATURES ================= -->
+
+  <section
+    class="features"
+    id="features"
+  >
 
     <h2 class="section-title">
-      Travel <span>Gallery</span>
+
+      Why
+      <span>LearnHub?</span>
+
     </h2>
 
-    <div class="gallery-grid">
 
-      <img
-        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
-        alt="Nature"
-      >
+    <div class="feature-grid">
 
-      <img
-        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
-        alt="Lake"
-      >
 
-      <img
-        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
-        alt="Mountain"
-      >
+      <div class="feature">
 
-      <img
-        src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
-        alt="Beach"
-      >
+        <div class="feature-icon">
+          🎓
+        </div>
 
-      <img
-        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
-        alt="Landscape"
-      >
+        <h3>
+          Expert Instructors
+        </h3>
 
-      <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80"
-        alt="Forest"
-      >
+        <p>
 
-      <img
-        src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
-        alt="Travel"
-      >
+          Learn from knowledgeable
+          instructors and educators.
 
-      <img
-        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
-        alt="Adventure"
-      >
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          🕐
+        </div>
+
+        <h3>
+          Learn Anytime
+        </h3>
+
+        <p>
+
+          Access learning materials
+          whenever it is convenient
+          for you.
+
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          📜
+        </div>
+
+        <h3>
+          Certificates
+        </h3>
+
+        <p>
+
+          Complete courses and
+          receive certificates
+          of achievement.
+
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          📚
+        </div>
+
+        <h3>
+          Study Resources
+        </h3>
+
+        <p>
+
+          Access useful learning
+          resources and materials.
+
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          🌎
+        </div>
+
+        <h3>
+          Learn Anywhere
+        </h3>
+
+        <p>
+
+          Study from anywhere using
+          your computer or mobile device.
+
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          💡
+        </div>
+
+        <h3>
+          Practical Learning
+        </h3>
+
+        <p>
+
+          Build knowledge through
+          practical examples and projects.
+
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- WHY CHOOSE US -->
-  <section class="why-us">
+  <!-- ================= INSTRUCTORS ================= -->
+
+  <section
+    class="instructors"
+    id="instructors"
+  >
 
     <h2 class="section-title">
-      Why <span>Choose Us?</span>
+
+      Our
+      <span>Instructors</span>
+
     </h2>
 
-    <div class="why-grid">
 
-      <div class="why-card">
+    <div class="instructor-grid">
 
-        <div class="icon">🌍</div>
 
-        <h3>Beautiful Destinations</h3>
+      <div class="instructor">
+
+        <div class="instructor-avatar">
+          👨‍💻
+        </div>
+
+        <h3>
+          Alex Johnson
+        </h3>
 
         <p>
-          Discover amazing places and unforgettable
-          travel experiences.
+          Web Development Instructor
         </p>
 
       </div>
 
 
-      <div class="why-card">
+      <div class="instructor">
 
-        <div class="icon">💰</div>
+        <div class="instructor-avatar">
+          👩‍💻
+        </div>
 
-        <h3>Affordable Packages</h3>
+        <h3>
+          Sarah Williams
+        </h3>
 
         <p>
-          Enjoy memorable holidays with
-          budget-friendly packages.
+          Data Science Instructor
         </p>
 
       </div>
 
 
-      <div class="why-card">
+      <div class="instructor">
 
-        <div class="icon">⭐</div>
+        <div class="instructor-avatar">
+          👨‍🎨
+        </div>
 
-        <h3>Great Experiences</h3>
+        <h3>
+          David Thomas
+        </h3>
 
         <p>
-          We focus on creating enjoyable and
-          memorable journeys.
+          UI/UX Design Instructor
         </p>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- BOOKING -->
-  <section class="booking" id="booking">
+  <!-- ================= STATS ================= -->
+
+  <section class="stats">
+
+    <div class="stats-grid">
+
+
+      <div class="stat">
+
+        <h3>
+          50+
+        </h3>
+
+        <p>
+          Courses
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
+          20+
+        </h3>
+
+        <p>
+          Instructors
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
+          5K+
+        </h3>
+
+        <p>
+          Students
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
+          95%
+        </h3>
+
+        <p>
+          Satisfaction
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= REGISTRATION ================= -->
+
+  <section
+    class="register"
+    id="register"
+  >
 
     <h2 class="section-title">
-      Ready to <span>Travel?</span>
+
+      Start
+      <span>Learning Today</span>
+
     </h2>
 
     <p>
-      Start planning your next adventure today.
+
+      Choose a course and begin
+      your learning journey.
+
     </p>
 
     <a
-      href="mailto:wanderworld@example.com?subject=Travel%20Booking%20Request"
-      class="btn"
+      href="mailto:learnhub@example.com?subject=Course%20Registration"
+      class="btn btn-blue"
     >
-      Make a Booking
+      Register Now
     </a>
 
-    <a href="#contact" class="btn btn-light">
-      Contact Us
+    <a
+      href="#courses"
+      class="btn"
+    >
+      Browse Courses
     </a>
 
   </section>
 
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <!-- ================= CONTACT ================= -->
+
+  <section
+    class="contact"
+    id="contact"
+  >
 
     <h2 class="section-title">
-      Contact <span>Us</span>
+
+      Contact
+      <span>LearnHub</span>
+
     </h2>
 
     <p>
-      Have questions about a destination or package?
-      Get in touch with us.
+
+      Have questions?
+      Get in touch with our team.
+
     </p>
+
 
     <div class="contact-links">
 
-      <a href="mailto:wanderworld@example.com">
+
+      <a
+        href="mailto:learnhub@example.com"
+      >
         📧 Email
       </a>
 
-      <a href="tel:+919876543210">
-        📞 Call Us
+
+      <a
+        href="tel:+919876543210"
+      >
+        📞 Call
       </a>
+
 
       <a href="#home">
         🏠 Home
       </a>
 
+
       <a href="#about">
         ℹ️ About
       </a>
 
-      <a href="#destinations">
-        🌍 Destinations
+
+      <a href="#courses">
+        📚 Courses
       </a>
 
-      <a href="#packages">
-        🧳 Packages
+
+      <a href="#features">
+        ⭐ Features
       </a>
 
-      <a href="#gallery">
-        📸 Gallery
+
+      <a href="#instructors">
+        👨‍🏫 Instructors
       </a>
 
-      <a href="#booking">
-        📝 Booking
+
+      <a href="#register">
+        🎓 Register
       </a>
+
 
     </div>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
     <p>
-      © 2026 WanderWorld | College Web Development Assignment
+
+      © 2026 LearnHub |
+      Online Learning Platform |
+      College Web Development Assignment
+
     </p>
 
   </footer>
 
+
 </body>
+
 </html>
