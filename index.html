@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sreekutty B | Portfolio</title>
+  <title>Sreekutty B | Personal Website</title>
 
   <style>
     * {
@@ -21,15 +21,13 @@
       line-height: 1.6;
     }
 
-    /* NAVBAR */
+    /* NAVIGATION */
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
       padding: 18px 8%;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.95);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -37,15 +35,15 @@
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 25px;
       font-weight: bold;
       color: #38bdf8;
     }
 
     nav ul {
       display: flex;
+      gap: 25px;
       list-style: none;
-      gap: 30px;
     }
 
     nav ul li a {
@@ -62,24 +60,21 @@
     /* HERO */
     .hero {
       min-height: 100vh;
+      padding: 120px 20px 80px;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 100px 20px 60px;
-      background:
-        radial-gradient(circle at top right, #2563eb55, transparent 40%),
-        radial-gradient(circle at bottom left, #38bdf833, transparent 40%),
-        #0f172a;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
     }
 
     .hero-content {
-      max-width: 800px;
-      animation: appear 1.2s ease;
+      max-width: 850px;
+      animation: fadeIn 1.2s ease;
     }
 
     .hero h1 {
-      font-size: 64px;
+      font-size: 65px;
       margin-bottom: 15px;
     }
 
@@ -89,41 +84,41 @@
 
     .hero h2 {
       font-size: 28px;
-      color: #cbd5e1;
+      color: #dbeafe;
       margin-bottom: 20px;
       font-weight: normal;
     }
 
     .hero p {
-      font-size: 18px;
-      color: #94a3b8;
-      margin-bottom: 35px;
+      font-size: 19px;
+      color: #cbd5e1;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 30px;
+      padding: 13px 28px;
+      margin: 6px;
       background: #38bdf8;
       color: #0f172a;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
-      margin: 5px;
       transition: 0.3s;
     }
 
     .btn:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
     }
 
-    .btn-outline {
+    .outline {
       background: transparent;
-      border: 2px solid #38bdf8;
       color: #38bdf8;
+      border: 2px solid #38bdf8;
     }
 
-    /* GENERAL SECTION */
+    /* SECTIONS */
     section {
       padding: 100px 8%;
     }
@@ -144,7 +139,7 @@
     }
 
     .about-content {
-      max-width: 900px;
+      max-width: 850px;
       margin: auto;
       text-align: center;
     }
@@ -164,7 +159,7 @@
       gap: 25px;
     }
 
-    .skill-card {
+    .skill {
       background: #1e293b;
       padding: 30px;
       text-align: center;
@@ -173,19 +168,17 @@
       transition: 0.3s;
     }
 
-    .skill-card:hover {
+    .skill:hover {
       transform: translateY(-8px);
       border-color: #38bdf8;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
-    .skill-card h3 {
+    .skill h3 {
       color: #38bdf8;
       margin-bottom: 10px;
-      font-size: 22px;
     }
 
-    .skill-card p {
+    .skill p {
       color: #94a3b8;
     }
 
@@ -202,7 +195,7 @@
       gap: 25px;
     }
 
-    .project-card {
+    .project {
       background: #1e293b;
       padding: 30px;
       border-radius: 15px;
@@ -210,51 +203,58 @@
       transition: 0.3s;
     }
 
-    .project-card:hover {
+    .project:hover {
       transform: translateY(-8px);
       border-color: #38bdf8;
     }
 
-    .project-card h3 {
+    .project h3 {
       color: #38bdf8;
       margin-bottom: 12px;
     }
 
-    .project-card p {
+    .project p {
       color: #94a3b8;
       margin-bottom: 20px;
     }
 
-    .project-link {
+    .project a {
       color: #38bdf8;
       text-decoration: none;
       font-weight: bold;
     }
 
     /* CONTACT */
-    .contact-content {
-      max-width: 700px;
-      margin: auto;
+    .contact {
       text-align: center;
     }
 
-    .contact-content p {
+    .contact p {
       color: #cbd5e1;
       font-size: 18px;
       margin-bottom: 30px;
     }
 
-    .contact-info {
+    .contact-links {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
     }
 
-    .contact-info a {
+    .contact-links a {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid #38bdf8;
+      border-radius: 25px;
       color: #38bdf8;
       text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact-links a:hover {
+      background: #38bdf8;
+      color: #0f172a;
     }
 
     /* FOOTER */
@@ -266,7 +266,7 @@
     }
 
     /* ANIMATION */
-    @keyframes appear {
+    @keyframes fadeIn {
       from {
         opacity: 0;
         transform: translateY(30px);
@@ -280,16 +280,17 @@
 
     /* MOBILE */
     @media (max-width: 800px) {
+
       nav {
         padding: 15px 5%;
       }
 
       nav ul {
-        gap: 12px;
+        gap: 10px;
       }
 
       nav ul li a {
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .hero h1 {
@@ -297,7 +298,7 @@
       }
 
       .hero h2 {
-        font-size: 22px;
+        font-size: 21px;
       }
 
       .skills-container,
@@ -308,10 +309,6 @@
       section {
         padding: 80px 6%;
       }
-
-      .section-title {
-        font-size: 32px;
-      }
     }
   </style>
 </head>
@@ -320,7 +317,10 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="logo">Sreekutty B</div>
+
+    <div class="logo">
+      Sreekutty B
+    </div>
 
     <ul>
       <li><a href="#home">Home</a></li>
@@ -329,6 +329,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
 
@@ -337,20 +338,24 @@
 
     <div class="hero-content">
 
-      <h1>Hello, I'm <span>Sreekutty B</span></h1>
+      <h1>
+        Hello, I'm <span>Sreekutty B</span>
+      </h1>
 
-      <h2>Welcome to My Website</h2>
+      <h2>
+        Student | Web Enthusiast | Creative Learner
+      </h2>
 
       <p>
-        I'm passionate about learning, creating and building
-        beautiful digital experiences.
+        Welcome to my personal website. Explore my skills,
+        projects and interests.
       </p>
 
       <a href="#about" class="btn">
-        About Me
+        Explore My Website
       </a>
 
-      <a href="#contact" class="btn btn-outline">
+      <a href="#contact" class="btn outline">
         Contact Me
       </a>
 
@@ -369,20 +374,23 @@
     <div class="about-content">
 
       <p>
-        Hello! I'm Sreekutty B.
+        Hello! I'm Sreekutty B, a student interested in
+        technology, web development and creative projects.
       </p>
 
       <p>
-        Welcome to my personal website. This is a place where
-        I can share my interests, skills, projects and
-        things I create.
+        I enjoy learning new technologies and developing
+        simple and attractive websites.
       </p>
 
       <p>
-        I enjoy learning new technologies and exploring
-        creative ideas. I'm always interested in improving
-        my skills and taking on new challenges.
+        This website was created as part of my college
+        web development assignment.
       </p>
+
+      <a href="#skills" class="btn">
+        View My Skills
+      </a>
 
     </div>
 
@@ -398,45 +406,45 @@
 
     <div class="skills-container">
 
-      <div class="skill-card">
+      <div class="skill">
         <h3>HTML</h3>
         <p>
-          Creating clean and structured web pages.
+          Creating structured and semantic web pages.
         </p>
       </div>
 
-      <div class="skill-card">
+      <div class="skill">
         <h3>CSS</h3>
         <p>
           Designing responsive and attractive websites.
         </p>
       </div>
 
-      <div class="skill-card">
+      <div class="skill">
         <h3>JavaScript</h3>
         <p>
-          Adding interaction and functionality to websites.
+          Adding interactive features to websites.
         </p>
       </div>
 
-      <div class="skill-card">
+      <div class="skill">
         <h3>GitHub</h3>
         <p>
-          Managing and sharing projects using GitHub.
+          Managing and publishing source code.
         </p>
       </div>
 
-      <div class="skill-card">
+      <div class="skill">
         <h3>Vercel</h3>
         <p>
-          Deploying websites quickly and easily.
+          Deploying websites online.
         </p>
       </div>
 
-      <div class="skill-card">
-        <h3>Learning</h3>
+      <div class="skill">
+        <h3>Creativity</h3>
         <p>
-          Continuously exploring new technologies.
+          Creating new ideas and digital experiences.
         </p>
       </div>
 
@@ -454,49 +462,51 @@
 
     <div class="projects-container">
 
-      <div class="project-card">
+      <div class="project">
 
-        <h3>My Portfolio</h3>
+        <h3>Personal Portfolio</h3>
 
         <p>
-          A personal portfolio website created using
-          HTML and CSS.
+          A responsive personal portfolio website
+          developed using HTML and CSS.
         </p>
 
-        <a href="#" class="project-link">
-          View Project →
+        <a href="https://github.com/amsree1604-svg/my-project"
+           target="_blank">
+          GitHub →
         </a>
 
       </div>
 
 
-      <div class="project-card">
+      <div class="project">
 
-        <h3>Web Project</h3>
+        <h3>College Assignment</h3>
 
         <p>
-          A simple responsive website designed to
-          practice frontend development.
+          A professional static website created
+          as part of my college assignment.
         </p>
 
-        <a href="#" class="project-link">
-          View Project →
+        <a href="https://my-project-three-psi-66.vercel.app"
+           target="_blank">
+          Live Website →
         </a>
 
       </div>
 
 
-      <div class="project-card">
+      <div class="project">
 
         <h3>Future Project</h3>
 
         <p>
-          More exciting projects and ideas will be
-          added here soon.
+          More web development projects will be
+          added here in the future.
         </p>
 
-        <a href="#contact" class="project-link">
-          Stay Tuned →
+        <a href="#contact">
+          Contact Me →
         </a>
 
       </div>
@@ -507,40 +517,60 @@
 
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section class="contact" id="contact">
 
     <h2 class="section-title">
       Contact <span>Me</span>
     </h2>
 
-    <div class="contact-content">
+    <p>
+      Thank you for visiting my website.
+      You can connect with me through the links below.
+    </p>
 
-      <p>
-        Interested in connecting or working together?
-        Feel free to reach out.
-      </p>
+    <div class="contact-links">
 
-      <div class="contact-info">
+      <!-- LINK 1 -->
+      <a href="mailto:your-email@example.com">
+        📧 Email
+      </a>
 
-        <a href="mailto:your-email@example.com">
-          📧 Email
-        </a>
+      <!-- LINK 2 -->
+      <a href="https://github.com/amsree1604-svg"
+         target="_blank">
+        💻 GitHub
+      </a>
 
-        <a href="#">
-          💻 GitHub
-        </a>
+      <!-- LINK 3 -->
+      <a href="https://www.linkedin.com"
+         target="_blank">
+        🔗 LinkedIn
+      </a>
 
-        <a href="#">
-          🔗 LinkedIn
-        </a>
+      <!-- LINK 4 -->
+      <a href="#home">
+        🏠 Home
+      </a>
 
-      </div>
+      <!-- LINK 5 -->
+      <a href="#about">
+        👤 About
+      </a>
 
-      <a
-        href="mailto:your-email@example.com"
-        class="btn"
-      >
-        Send Me an Email
+      <!-- LINK 6 -->
+      <a href="#skills">
+        🛠 Skills
+      </a>
+
+      <!-- LINK 7 -->
+      <a href="#projects">
+        🚀 Projects
+      </a>
+
+      <!-- LINK 8 -->
+      <a href="https://my-project-three-psi-66.vercel.app"
+         target="_blank">
+        🌐 Live Website
       </a>
 
     </div>
@@ -552,7 +582,7 @@
   <footer>
 
     <p>
-      © 2026 Sreekutty B. All Rights Reserved.
+      © 2026 Sreekutty B | College Web Development Assignment
     </p>
 
   </footer>
