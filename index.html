@@ -8,9 +8,11 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>LearnHub | Online Learning Platform</title>
+  <title>TechNova | Technology Company</title>
 
   <style>
+
+    /* ================= GENERAL ================= */
 
     * {
       margin: 0;
@@ -26,6 +28,21 @@
       line-height: 1.6;
     }
 
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: #2563eb;
+    }
+
+
     /* ================= NAVBAR ================= */
 
     nav {
@@ -36,7 +53,7 @@
 
       padding: 18px 7%;
 
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
 
       display: flex;
       justify-content: space-between;
@@ -44,13 +61,18 @@
 
       z-index: 1000;
 
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      box-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.08);
     }
 
     .logo {
-      font-size: 26px;
+      font-size: 27px;
       font-weight: bold;
       color: #2563eb;
+    }
+
+    .logo span {
+      color: #7c3aed;
     }
 
     nav ul {
@@ -74,7 +96,6 @@
     /* ================= HERO ================= */
 
     .hero {
-
       min-height: 100vh;
 
       padding: 120px 20px 80px;
@@ -88,15 +109,16 @@
       background:
         linear-gradient(
           135deg,
-          #2563eb,
-          #7c3aed
+          #0f172a,
+          #1e3a8a,
+          #6d28d9
         );
 
       color: white;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
 
       animation: fadeIn 1.2s ease;
     }
@@ -107,17 +129,16 @@
     }
 
     .hero h1 span {
-      color: #bfdbfe;
+      color: #93c5fd;
     }
 
     .hero p {
-      font-size: 21px;
-      color: #e0e7ff;
+      font-size: 20px;
+      color: #dbeafe;
       margin-bottom: 35px;
     }
 
     .btn {
-
       display: inline-block;
 
       padding: 14px 30px;
@@ -138,37 +159,15 @@
     }
 
     .btn:hover {
-
       transform: translateY(-5px);
 
       box-shadow:
-        0 10px 25px
-        rgba(0,0,0,0.2);
+        0 10px 25px rgba(0, 0, 0, 0.25);
     }
 
     .btn-blue {
       background: #2563eb;
       color: white;
-    }
-
-
-    /* ================= GENERAL ================= */
-
-    section {
-      padding: 90px 8%;
-    }
-
-    .section-title {
-
-      text-align: center;
-
-      font-size: 40px;
-
-      margin-bottom: 50px;
-    }
-
-    .section-title span {
-      color: #2563eb;
     }
 
 
@@ -179,32 +178,68 @@
     }
 
     .about-content {
-
-      max-width: 900px;
-
+      max-width: 950px;
       margin: auto;
-
       text-align: center;
     }
 
     .about-content p {
-
       font-size: 18px;
-
       color: #64748b;
-
       margin-bottom: 20px;
     }
 
+    .about-boxes {
+      max-width: 1000px;
+      margin: 45px auto 0;
 
-    /* ================= COURSES ================= */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-    .courses {
+      gap: 25px;
+    }
+
+    .about-box {
+      padding: 30px;
+
+      background: #f8fafc;
+
+      border-radius: 15px;
+
+      text-align: center;
+
+      transition: 0.3s;
+    }
+
+    .about-box:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-box-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .about-box h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .about-box p {
+      color: #64748b;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services {
       background: #f1f5f9;
     }
 
-    .course-grid {
-
+    .service-grid {
       max-width: 1100px;
 
       margin: auto;
@@ -217,8 +252,7 @@
       gap: 25px;
     }
 
-    .course-card {
-
+    .service-card {
       background: white;
 
       padding: 30px;
@@ -228,52 +262,96 @@
       border: 1px solid #e2e8f0;
 
       transition: 0.3s;
-
-      box-shadow:
-        0 5px 20px
-        rgba(0,0,0,0.05);
     }
 
-    .course-card:hover {
-
+    .service-card:hover {
       transform: translateY(-8px);
 
       border-color: #2563eb;
 
       box-shadow:
-        0 12px 30px
-        rgba(37,99,235,0.15);
+        0 12px 30px rgba(37, 99, 235, 0.15);
     }
 
-    .course-icon {
-
+    .service-icon {
       font-size: 45px;
-
       margin-bottom: 15px;
     }
 
-    .course-card h3 {
-
+    .service-card h3 {
       color: #2563eb;
-
       margin-bottom: 12px;
-
       font-size: 22px;
     }
 
-    .course-card p {
-
+    .service-card p {
       color: #64748b;
-
       margin-bottom: 20px;
     }
 
-    .course-card a {
-
+    .service-card a {
       text-decoration: none;
-
       color: #2563eb;
+      font-weight: bold;
+    }
 
+
+    /* ================= PRODUCTS ================= */
+
+    .products {
+      background: white;
+    }
+
+    .product-grid {
+      max-width: 1000px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .product {
+      padding: 35px;
+
+      text-align: center;
+
+      background: #f8fafc;
+
+      border-radius: 15px;
+
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      color: #64748b;
+      margin-bottom: 18px;
+    }
+
+    .product a {
+      text-decoration: none;
+      color: #2563eb;
       font-weight: bold;
     }
 
@@ -281,11 +359,10 @@
     /* ================= FEATURES ================= */
 
     .features {
-      background: white;
+      background: #f1f5f9;
     }
 
     .feature-grid {
-
       max-width: 1000px;
 
       margin: auto;
@@ -299,6 +376,7 @@
     }
 
     .feature {
+      background: white;
 
       text-align: center;
 
@@ -306,49 +384,38 @@
 
       border-radius: 15px;
 
-      background: #f8fafc;
-
       transition: 0.3s;
     }
 
     .feature:hover {
-
       transform: translateY(-7px);
 
       box-shadow:
-        0 10px 25px
-        rgba(0,0,0,0.08);
+        0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
     .feature-icon {
-
       font-size: 45px;
-
       margin-bottom: 15px;
     }
 
     .feature h3 {
-
       color: #2563eb;
-
       margin-bottom: 10px;
     }
 
     .feature p {
-
       color: #64748b;
     }
 
 
-    /* ================= INSTRUCTORS ================= */
+    /* ================= TEAM ================= */
 
-    .instructors {
-
-      background: #f1f5f9;
+    .team {
+      background: white;
     }
 
-    .instructor-grid {
-
+    .team-grid {
       max-width: 1000px;
 
       margin: auto;
@@ -361,9 +428,8 @@
       gap: 25px;
     }
 
-    .instructor {
-
-      background: white;
+    .team-member {
+      background: #f8fafc;
 
       padding: 30px;
 
@@ -374,17 +440,14 @@
       transition: 0.3s;
     }
 
-    .instructor:hover {
-
+    .team-member:hover {
       transform: translateY(-7px);
 
       box-shadow:
-        0 10px 25px
-        rgba(0,0,0,0.08);
+        0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
-    .instructor-avatar {
-
+    .avatar {
       width: 90px;
       height: 90px;
 
@@ -404,15 +467,12 @@
       color: #2563eb;
     }
 
-    .instructor h3 {
-
-      margin-bottom: 8px;
-
+    .team-member h3 {
       color: #2563eb;
+      margin-bottom: 8px;
     }
 
-    .instructor p {
-
+    .team-member p {
       color: #64748b;
     }
 
@@ -420,7 +480,6 @@
     /* ================= STATS ================= */
 
     .stats {
-
       background:
         linear-gradient(
           135deg,
@@ -432,7 +491,6 @@
     }
 
     .stats-grid {
-
       max-width: 1000px;
 
       margin: auto;
@@ -448,57 +506,29 @@
     }
 
     .stat h3 {
-
-      font-size: 40px;
-
+      font-size: 42px;
       margin-bottom: 5px;
     }
 
     .stat p {
-
       color: #dbeafe;
-    }
-
-
-    /* ================= REGISTRATION ================= */
-
-    .register {
-
-      background: white;
-
-      text-align: center;
-    }
-
-    .register p {
-
-      color: #64748b;
-
-      font-size: 18px;
-
-      margin-bottom: 25px;
     }
 
 
     /* ================= CONTACT ================= */
 
     .contact {
-
       background: #f8fafc;
-
       text-align: center;
     }
 
     .contact p {
-
       color: #64748b;
-
       font-size: 18px;
-
       margin-bottom: 30px;
     }
 
     .contact-links {
-
       display: flex;
 
       justify-content: center;
@@ -509,7 +539,6 @@
     }
 
     .contact-links a {
-
       text-decoration: none;
 
       color: #2563eb;
@@ -524,9 +553,7 @@
     }
 
     .contact-links a:hover {
-
       background: #2563eb;
-
       color: white;
     }
 
@@ -534,7 +561,6 @@
     /* ================= FOOTER ================= */
 
     footer {
-
       background: #020617;
 
       color: #94a3b8;
@@ -550,7 +576,6 @@
     @keyframes fadeIn {
 
       from {
-
         opacity: 0;
 
         transform:
@@ -558,12 +583,12 @@
       }
 
       to {
-
         opacity: 1;
 
         transform:
           translateY(0);
       }
+
     }
 
 
@@ -572,52 +597,46 @@
     @media (max-width: 800px) {
 
       nav {
-
         padding: 15px 4%;
       }
 
       nav ul {
-
         gap: 10px;
       }
 
       nav ul li a {
-
-        font-size: 11px;
+        font-size: 10px;
       }
 
       .hero h1 {
-
         font-size: 42px;
       }
 
       .hero p {
-
         font-size: 17px;
       }
 
-      .course-grid,
+      .service-grid,
+      .product-grid,
       .feature-grid,
-      .instructor-grid {
-
+      .team-grid,
+      .about-boxes {
         grid-template-columns: 1fr;
       }
 
       .stats-grid {
-
         grid-template-columns:
           repeat(2, 1fr);
       }
 
       section {
-
         padding: 70px 6%;
       }
 
       .section-title {
-
         font-size: 32px;
       }
+
     }
 
   </style>
@@ -633,7 +652,7 @@
   <nav>
 
     <div class="logo">
-      LearnHub
+      Tech<span>Nova</span>
     </div>
 
     <ul>
@@ -651,8 +670,14 @@
       </li>
 
       <li>
-        <a href="#courses">
-          Courses
+        <a href="#services">
+          Services
+        </a>
+      </li>
+
+      <li>
+        <a href="#products">
+          Products
         </a>
       </li>
 
@@ -663,8 +688,8 @@
       </li>
 
       <li>
-        <a href="#instructors">
-          Instructors
+        <a href="#team">
+          Team
         </a>
       </li>
 
@@ -689,33 +714,33 @@
     <div class="hero-content">
 
       <h1>
-        Learn.
-        <span>Grow.</span>
-        Succeed.
+        Building the
+        <span>Future</span>
+        with Technology
       </h1>
 
       <p>
 
-        Welcome to LearnHub —
-        an online learning platform
-        designed to help students
-        build knowledge and develop
-        valuable skills.
+        Welcome to TechNova —
+        a modern technology company
+        focused on innovative digital
+        solutions for businesses and
+        individuals.
 
       </p>
 
       <a
-        href="#courses"
+        href="#services"
         class="btn"
       >
-        Explore Courses
+        Explore Services
       </a>
 
       <a
-        href="#register"
+        href="#contact"
         class="btn"
       >
-        Start Learning
+        Contact Us
       </a>
 
     </div>
@@ -733,7 +758,7 @@
     <h2 class="section-title">
 
       About
-      <span>LearnHub</span>
+      <span>TechNova</span>
 
     </h2>
 
@@ -741,54 +766,108 @@
 
       <p>
 
-        LearnHub is a modern online learning
-        platform created to make education
-        accessible, simple and engaging.
+        TechNova is a technology company
+        dedicated to creating modern,
+        reliable and user-friendly
+        digital solutions.
 
       </p>
 
       <p>
 
-        Students can explore different
-        subjects, learn from experienced
-        instructors and develop practical
-        skills from anywhere.
+        Our goal is to combine creativity,
+        technology and innovation to help
+        organizations solve real-world
+        problems and grow digitally.
 
       </p>
 
-      <a
-        href="#features"
-        class="btn btn-blue"
-      >
-        Learn More
-      </a>
+    </div>
+
+
+    <div class="about-boxes">
+
+
+      <div class="about-box">
+
+        <div class="about-box-icon">
+          💡
+        </div>
+
+        <h3>
+          Innovation
+        </h3>
+
+        <p>
+          We create new ideas and
+          modern technology solutions.
+        </p>
+
+      </div>
+
+
+      <div class="about-box">
+
+        <div class="about-box-icon">
+          🎯
+        </div>
+
+        <h3>
+          Our Mission
+        </h3>
+
+        <p>
+          To make technology simple,
+          useful and accessible.
+        </p>
+
+      </div>
+
+
+      <div class="about-box">
+
+        <div class="about-box-icon">
+          🌎
+        </div>
+
+        <h3>
+          Our Vision
+        </h3>
+
+        <p>
+          To build a smarter digital
+          future through technology.
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- ================= COURSES ================= -->
+  <!-- ================= SERVICES ================= -->
 
   <section
-    class="courses"
-    id="courses"
+    class="services"
+    id="services"
   >
 
     <h2 class="section-title">
 
-      Popular
-      <span>Courses</span>
+      Our
+      <span>Services</span>
 
     </h2>
 
 
-    <div class="course-grid">
+    <div class="service-grid">
 
 
-      <div class="course-card">
+      <div class="service-card">
 
-        <div class="course-icon">
+        <div class="service-icon">
           💻
         </div>
 
@@ -798,71 +877,22 @@
 
         <p>
 
-          Learn HTML, CSS and JavaScript
-          and build modern websites.
+          We create modern,
+          responsive and user-friendly
+          websites.
 
         </p>
 
-        <a href="#register">
-          Enroll Now →
+        <a href="#contact">
+          Learn More →
         </a>
 
       </div>
 
 
-      <div class="course-card">
+      <div class="service-card">
 
-        <div class="course-icon">
-          📊
-        </div>
-
-        <h3>
-          Data Science
-        </h3>
-
-        <p>
-
-          Explore data analysis,
-          visualization and
-          basic machine learning.
-
-        </p>
-
-        <a href="#register">
-          Enroll Now →
-        </a>
-
-      </div>
-
-
-      <div class="course-card">
-
-        <div class="course-icon">
-          🎨
-        </div>
-
-        <h3>
-          UI/UX Design
-        </h3>
-
-        <p>
-
-          Learn the fundamentals of
-          user interface and experience
-          design.
-
-        </p>
-
-        <a href="#register">
-          Enroll Now →
-        </a>
-
-      </div>
-
-
-      <div class="course-card">
-
-        <div class="course-icon">
+        <div class="service-icon">
           📱
         </div>
 
@@ -872,47 +902,47 @@
 
         <p>
 
-          Discover the basics of
-          creating modern mobile
-          applications.
+          Build powerful mobile
+          applications for modern
+          devices.
 
         </p>
 
-        <a href="#register">
-          Enroll Now →
+        <a href="#contact">
+          Learn More →
         </a>
 
       </div>
 
 
-      <div class="course-card">
+      <div class="service-card">
 
-        <div class="course-icon">
-          🤖
+        <div class="service-icon">
+          ☁️
         </div>
 
         <h3>
-          Artificial Intelligence
+          Cloud Solutions
         </h3>
 
         <p>
 
-          Understand AI concepts,
-          applications and future
-          technologies.
+          Reliable cloud-based
+          solutions for modern
+          businesses.
 
         </p>
 
-        <a href="#register">
-          Enroll Now →
+        <a href="#contact">
+          Learn More →
         </a>
 
       </div>
 
 
-      <div class="course-card">
+      <div class="service-card">
 
-        <div class="course-icon">
+        <div class="service-icon">
           🔐
         </div>
 
@@ -922,14 +952,162 @@
 
         <p>
 
-          Learn fundamental concepts
-          of online safety and
-          cybersecurity.
+          Protect digital systems
+          and data with modern
+          security solutions.
 
         </p>
 
-        <a href="#register">
-          Enroll Now →
+        <a href="#contact">
+          Learn More →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🤖
+        </div>
+
+        <h3>
+          AI Solutions
+        </h3>
+
+        <p>
+
+          Explore artificial
+          intelligence for smarter
+          business processes.
+
+        </p>
+
+        <a href="#contact">
+          Learn More →
+        </a>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          📊
+        </div>
+
+        <h3>
+          Data Analytics
+        </h3>
+
+        <p>
+
+          Transform data into
+          meaningful information
+          and insights.
+
+        </p>
+
+        <a href="#contact">
+          Learn More →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PRODUCTS ================= -->
+
+  <section
+    class="products"
+    id="products"
+  >
+
+    <h2 class="section-title">
+
+      Our
+      <span>Products</span>
+
+    </h2>
+
+
+    <div class="product-grid">
+
+
+      <div class="product">
+
+        <div class="product-icon">
+          ⚡
+        </div>
+
+        <h3>
+          Nova Cloud
+        </h3>
+
+        <p>
+
+          A simple cloud platform
+          for storing and managing
+          digital information.
+
+        </p>
+
+        <a href="#contact">
+          View Product →
+        </a>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-icon">
+          📈
+        </div>
+
+        <h3>
+          Nova Analytics
+        </h3>
+
+        <p>
+
+          A powerful platform for
+          understanding business
+          data and trends.
+
+        </p>
+
+        <a href="#contact">
+          View Product →
+        </a>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-icon">
+          🔒
+        </div>
+
+        <h3>
+          Nova Secure
+        </h3>
+
+        <p>
+
+          Digital security tools
+          designed to protect
+          important information.
+
+        </p>
+
+        <a href="#contact">
+          View Product →
         </a>
 
       </div>
@@ -949,8 +1127,8 @@
 
     <h2 class="section-title">
 
-      Why
-      <span>LearnHub?</span>
+      Why Choose
+      <span>TechNova?</span>
 
     </h2>
 
@@ -961,18 +1139,16 @@
       <div class="feature">
 
         <div class="feature-icon">
-          🎓
+          🚀
         </div>
 
         <h3>
-          Expert Instructors
+          Fast Solutions
         </h3>
 
         <p>
-
-          Learn from knowledgeable
-          instructors and educators.
-
+          We focus on efficient
+          and reliable technology.
         </p>
 
       </div>
@@ -981,19 +1157,16 @@
       <div class="feature">
 
         <div class="feature-icon">
-          🕐
+          🛡️
         </div>
 
         <h3>
-          Learn Anytime
+          Secure
         </h3>
 
         <p>
-
-          Access learning materials
-          whenever it is convenient
-          for you.
-
+          Security is an important
+          part of every solution.
         </p>
 
       </div>
@@ -1002,59 +1175,16 @@
       <div class="feature">
 
         <div class="feature-icon">
-          📜
+          🎨
         </div>
 
         <h3>
-          Certificates
+          Modern Design
         </h3>
 
         <p>
-
-          Complete courses and
-          receive certificates
-          of achievement.
-
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-icon">
-          📚
-        </div>
-
-        <h3>
-          Study Resources
-        </h3>
-
-        <p>
-
-          Access useful learning
-          resources and materials.
-
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-icon">
-          🌎
-        </div>
-
-        <h3>
-          Learn Anywhere
-        </h3>
-
-        <p>
-
-          Study from anywhere using
-          your computer or mobile device.
-
+          Clean and user-friendly
+          digital experiences.
         </p>
 
       </div>
@@ -1067,14 +1197,48 @@
         </div>
 
         <h3>
-          Practical Learning
+          Innovative
         </h3>
 
         <p>
+          We use creative ideas
+          to solve problems.
+        </p>
 
-          Build knowledge through
-          practical examples and projects.
+      </div>
 
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          🤝
+        </div>
+
+        <h3>
+          Customer Focus
+        </h3>
+
+        <p>
+          We value customer needs
+          and satisfaction.
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          🌐
+        </div>
+
+        <h3>
+          Digital First
+        </h3>
+
+        <p>
+          Our solutions are designed
+          for the digital world.
         </p>
 
       </div>
@@ -1085,27 +1249,27 @@
   </section>
 
 
-  <!-- ================= INSTRUCTORS ================= -->
+  <!-- ================= TEAM ================= -->
 
   <section
-    class="instructors"
-    id="instructors"
+    class="team"
+    id="team"
   >
 
     <h2 class="section-title">
 
-      Our
-      <span>Instructors</span>
+      Meet Our
+      <span>Team</span>
 
     </h2>
 
 
-    <div class="instructor-grid">
+    <div class="team-grid">
 
 
-      <div class="instructor">
+      <div class="team-member">
 
-        <div class="instructor-avatar">
+        <div class="avatar">
           👨‍💻
         </div>
 
@@ -1114,15 +1278,15 @@
         </h3>
 
         <p>
-          Web Development Instructor
+          Chief Technology Officer
         </p>
 
       </div>
 
 
-      <div class="instructor">
+      <div class="team-member">
 
-        <div class="instructor-avatar">
+        <div class="avatar">
           👩‍💻
         </div>
 
@@ -1131,15 +1295,15 @@
         </h3>
 
         <p>
-          Data Science Instructor
+          Lead Software Engineer
         </p>
 
       </div>
 
 
-      <div class="instructor">
+      <div class="team-member">
 
-        <div class="instructor-avatar">
+        <div class="avatar">
           👨‍🎨
         </div>
 
@@ -1148,7 +1312,7 @@
         </h3>
 
         <p>
-          UI/UX Design Instructor
+          UI/UX Designer
         </p>
 
       </div>
@@ -1169,11 +1333,24 @@
       <div class="stat">
 
         <h3>
+          100+
+        </h3>
+
+        <p>
+          Projects Completed
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
           50+
         </h3>
 
         <p>
-          Courses
+          Happy Clients
         </p>
 
       </div>
@@ -1182,11 +1359,11 @@
       <div class="stat">
 
         <h3>
-          20+
+          25+
         </h3>
 
         <p>
-          Instructors
+          Team Members
         </p>
 
       </div>
@@ -1195,68 +1372,17 @@
       <div class="stat">
 
         <h3>
-          5K+
+          98%
         </h3>
 
         <p>
-          Students
-        </p>
-
-      </div>
-
-
-      <div class="stat">
-
-        <h3>
-          95%
-        </h3>
-
-        <p>
-          Satisfaction
+          Client Satisfaction
         </p>
 
       </div>
 
 
     </div>
-
-  </section>
-
-
-  <!-- ================= REGISTRATION ================= -->
-
-  <section
-    class="register"
-    id="register"
-  >
-
-    <h2 class="section-title">
-
-      Start
-      <span>Learning Today</span>
-
-    </h2>
-
-    <p>
-
-      Choose a course and begin
-      your learning journey.
-
-    </p>
-
-    <a
-      href="mailto:learnhub@example.com?subject=Course%20Registration"
-      class="btn btn-blue"
-    >
-      Register Now
-    </a>
-
-    <a
-      href="#courses"
-      class="btn"
-    >
-      Browse Courses
-    </a>
 
   </section>
 
@@ -1271,14 +1397,15 @@
     <h2 class="section-title">
 
       Contact
-      <span>LearnHub</span>
+      <span>TechNova</span>
 
     </h2>
 
     <p>
 
-      Have questions?
-      Get in touch with our team.
+      Have a project idea or need a
+      technology solution? Get in touch
+      with our team.
 
     </p>
 
@@ -1286,16 +1413,12 @@
     <div class="contact-links">
 
 
-      <a
-        href="mailto:learnhub@example.com"
-      >
+      <a href="mailto:technova@example.com">
         📧 Email
       </a>
 
 
-      <a
-        href="tel:+919876543210"
-      >
+      <a href="tel:+919876543210">
         📞 Call
       </a>
 
@@ -1310,8 +1433,13 @@
       </a>
 
 
-      <a href="#courses">
-        📚 Courses
+      <a href="#services">
+        💻 Services
+      </a>
+
+
+      <a href="#products">
+        🚀 Products
       </a>
 
 
@@ -1320,13 +1448,8 @@
       </a>
 
 
-      <a href="#instructors">
-        👨‍🏫 Instructors
-      </a>
-
-
-      <a href="#register">
-        🎓 Register
+      <a href="#team">
+        👨‍💻 Team
       </a>
 
 
@@ -1341,8 +1464,8 @@
 
     <p>
 
-      © 2026 LearnHub |
-      Online Learning Platform |
+      © 2026 TechNova |
+      Technology & Digital Solutions |
       College Web Development Assignment
 
     </p>
